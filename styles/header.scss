@@ -1,0 +1,22 @@
+.header {
+  background-color: $dark-green;
+  min-height: 70vh;
+  &-inner {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 60% 40%;
+    }
+    ul {
+      margin: 0;
+      list-style: none;
+      padding-left: 0;
+
+      justify-content: space-between;
+      display: none;
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
+    }
+  }
+}
