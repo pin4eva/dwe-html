@@ -1,0 +1,158 @@
+header {
+  background: #192c16;
+  height: 80px;
+  width: 100%;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+    .logo {
+      font-family: "Poppins";
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 24px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 5px;
+      }
+    }
+
+    .menu-btn{
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        border: 1px solid #fff;
+        z-index: 2;
+      }
+    }
+    .menu {
+      display: flex;
+      gap: 40px;
+      @media screen and (max-width: 768px) {
+        display: none;
+       
+      }
+
+      li {
+        list-style-type: none;
+        margin-left: 10px;
+        transition: 0.3s ease;
+        color: #fff;
+        font-weight: 600;
+        line-height: 24px;
+        font-size: 16px;
+      }
+    }
+    ul li:hover {
+      cursor: pointer;
+      color: #167e27;
+    }
+  }
+}
+
+.hero {
+  padding-top: 50px;
+  background: #192c16;
+  height: calc(90vh - 80px);
+  @media screen and (max-width: 768px) {
+    height: 100%;
+
+  }
+
+  .hero-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      
+    }
+
+    .left {
+      width: 100%;
+     
+      h1 {
+        font-family: "Poppins";
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: 0.02em;
+        color: #e6e6e6;
+        margin: 0;
+        @media screen and (max-width:768px) {
+          font-size: 36px
+        }
+      }
+      p {
+        font-family: "Poppins";
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0.02em;
+        color: #e6e6e6;
+        margin: 0;
+        margin-bottom: 25px;
+        @media screen and (max-width:768px) {
+          font-size: 18px
+        }
+      }
+      .chat {
+        background-color: #167e27;
+        width: 173px;
+        height: 56px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 20px;
+        border: none;
+        transition: 0.4s ease-in-out;
+
+        a {
+          text-decoration: none;
+          color: #ffffff;
+          font-family: "Poppins";
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 21px;
+          letter-spacing: 0.02em;
+        }
+      }
+      .chat:hover {
+        background-color: #052004;
+        cursor: pointer;
+      }
+    }
+    .right {
+      width: 100%;
+      .img-container {
+        width: 500px;
+        height: 416px;
+        // responsiveness on mobile screen (max-width: 768px)
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
